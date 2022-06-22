@@ -1,10 +1,12 @@
 ---
-- name: "update apt packages."
-  become: yes
-  apt:
-    update_cache: yes
-
-- name: "upgrade packages"
-  become: tyes
-  apt:
-    upgrade: yes
+# Exercise for setting up a web server in an EC
+- name: Exercise for setting up a web server in an EC 
+  # hosts: ubuntu
+  # Use the public IP if the VM is already created
+  hosts: 3.239.195.94
+  user: ubuntu
+  become: true
+  become_method: sudo
+  become_user: root
+  roles:
+   - setup
