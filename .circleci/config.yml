@@ -3,12 +3,12 @@ jobs:
 # Exercise: Config and Deployment
   configure_infrastructure: 
       docker:
-        - image: python:3.7-alpine3.1
+        - image: python:3.7-alpine3.15
       steps:
         - checkout
         - add_ssh_keys:
                 # You can get this ID in the section where you registered the SSH Key
-                fingerprints: ["XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX"] 
+                fingerprints: ["91:97:d3:35:28:fd:ef:50:ea:b0:f0:ae:72:09:d4:c6"] 
         - run:
             name: Install Ansible
             command: apk add --update ansible
